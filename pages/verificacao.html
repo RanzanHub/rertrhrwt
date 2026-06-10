@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector De Arquivos Suspeitos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Codigos Maliciosos</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/content1.html">Códigos Maliciosos</a></li>
+                <li><a href="../pages/content2.html">Como se defender?</a></li>
+                <li><a href="../pages/seguranca.html">Gerador de Senhas</a></li>
+                <li><a href="../pages/verificacao.html" class="active">Identificador de Vírus</a></li>
+                <li><a href="../pages/sobre.html">Sobre</a></li>
+                <li><a href="../pages/contato.html">Contato</a></li>
+            </ul>
+            <div class="controls">
+                <button id="aumentar-fonte" class="control-btn" title="Aumentar tamanho da fonte">
+                    <span class="material-icons">accessibility</span>
+                </button>
+                <button id="theme-toggle" class="control-btn" title="Alternar tema">
+                    <span class="material-icons">light_mode</span>
+                </button>
+                <button id="diminuir-fonte" class="control-btn" title="Diminuir fonte">
+                    <span class="material-icons">text_decrease</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-header">
+            <h2>Verificador de Arquivos</h2>
+            <p class="subtitle">Identifique possíveis ameaças em seus arquivos</p>
+        </section>
+
+        <article class="content">
+            <section class="content-section">
+                <h3>Analisar Arquivo Suspeito</h3>
+                <p>Selecione um arquivo para verificar se contém padrões ou assinaturas conhecidas de código malicioso.</p>
+                
+                <div class="file-upload-section">
+                    <label for="arquivo" class="file-input-label">
+                        <span class="material-icons">upload_file</span>
+                        Escolha um arquivo para analisar
+                    </label>
+                    <input type="file" id="arquivo" class="file-input">
+                </div>
+                <br>
+                <br>
+                <div class="results-grid">
+                    <div class="result-box">
+                        <h4>Resultado da Análise</h4>
+                        <p id="resultado">Nenhum arquivo selecionado ainda.</p>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="result-box">
+                        <h4>SHA-256 (Impressão Digital)</h4>
+                        <p id="hash">Aguardando análise...</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Informação:</strong> O SHA-256 é uma função hash criptográfica que gera uma "impressão digital" única de cada arquivo. Se o arquivo for alterado, mesmo minimamente, o hash será completamente diferente.
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Como o Identificador Funciona?</h3>
+                <p>
+                    O detector de vírus funciona analisando arquivos enviados pelo usuário. Primeiro, ele lê o conteúdo do arquivo utilizando JavaScript. Em seguida, procura por palavras ou padrões considerados suspeitos, como "trojan", "keylogger" e "ransomware". Além disso, o sistema calcula o hash SHA-256 do arquivo, que funciona como uma impressão digital única. Com base nessas verificações, o programa exibe um resultado indicando se encontrou sinais suspeitos ou não.
+                </p>
+
+                <div class="pillar-grid">
+                    <div class="pillar-item">
+                        <h4>Análise de Padrões</h4>
+                        <p>
+                            Procura por palavras-chave e padrões conhecidos associados a malware, como trojans, ransomware e keyloggers.
+                        </p>
+                    </div>
+                    <div class="pillar-item">
+                        <h4>Hash SHA-256</h4>
+                        <p>
+                            Calcula a impressão digital criptográfica do arquivo para identificação única e verificação de integridade.
+                        </p>
+                    </div>
+                    <div class="pillar-item">
+                        <h4>Resultado Visual</h4>
+                        <p>
+                            Verde indica segurança, vermelho indica possível ameaça. Esta é uma ferramenta educativa.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>⚠️ Aviso Importante:</strong> Embora demonstre conceitos utilizados por antivírus reais, este detector é apenas uma ferramenta educativa e não possui os recursos avançados necessários para detectar todas as ameaças reais. Para proteção completa, utilize um antivírus profissional.
+                    <br>
+                    <br>
+                    <strong>Ele não faz coisas essenciais de um antivírus real:</strong><br>
+                    ❌ Não tem banco global de vírus <br>
+                    ❌ Não executa arquivos em sandbox <br>
+                    ❌ Não analisa comportamento real do sistema <br>
+                    ❌ Não detecta malware ofuscado de forma confiável <br>
+                    ❌ Não usa inteligência de milhões de amostras <br>
+                    ❌ Não protege o computador de verdade <br>
+                </div>
+            </section>
+
+                <div class="info-box">
+                    <strong>💡 Dica:</strong> Se você encontrar um arquivo suspeito, não execute! Coloque-o em quarentena ou delete imediatamente. Quando em dúvida, sempre escolha não executar e buscar informações sobre o arquivo antes.
+                </div>
+            </section>
+        </article>
+
+        <div class="navigation-buttons">
+            <a href="../pages/seguranca.html" class="btn btn-secondary">← Gerador de Senhas</a>
+            <a href="../pages/sobre.html" class="btn btn-primary">Sobre →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Verificador de Arquivos - Web Lab. UPF - Ciências da Computação (ITEC)</p>
+            <p>Desenvolvido pelos alunos de WebLab - Prof. Pablo Leon Rodrigues</p>
+        </div>
+    </footer>
+
+    <script src="../js/verificacao.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

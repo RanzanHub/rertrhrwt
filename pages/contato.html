@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em Contato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Codigos Maliciosos</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/content1.html">Códigos Maliciosos</a></li>
+                <li><a href="../pages/content2.html">Como se defender?</a></li>
+                <li><a href="../pages/seguranca.html">Gerador de Senhas</a></li>
+                <li><a href="../pages/verificacao.html">Identificador de Vírus</a></li>
+                <li><a href="../pages/sobre.html">Sobre</a></li>
+                <li><a href="../pages/contato.html" class="active">Contato</a></li>
+            </ul>
+            <div class="controls">
+                <button id="aumentar-fonte" class="control-btn" title="Aumentar tamanho da fonte">
+                    <span class="material-icons">accessibility</span>
+                </button>
+                <button id="theme-toggle" class="control-btn" title="Alternar tema">
+                    <span class="material-icons">light_mode</span>
+                </button>
+                <button id="diminuir-fonte" class="control-btn" title="Diminuir fonte">
+                    <span class="material-icons">text_decrease</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-header">
+            <h2>Entre em Contato</h2>
+            <p class="subtitle">Envie suas dúvidas e sugestões sobre segurança da informação</p>
+        </section>
+
+        <section class="contact-container">
+            <article class="contact-form-section">
+                <h3>Formulário de Contato</h3>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            placeholder="Digite seu nome"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="seu.email@example.com"
+                        >
+                    </div>
+
+                   <div class="form-group">
+                        <label for="phone">Telefone</label>
+                            <input 
+                                 type="tel"
+                                 id="phone"
+                                 name="phone"
+                                 placeholder="+55 54999999999"
+                                 oninput="permitirSomenteNumerosEMais(this)"
+                            >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Assunto *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="duvida">Dúvida sobre Segurança</option>
+                            <option value="sugestao">Sugestão de Conteúdo</option>
+                            <option value="problema">Problema Técnico</option>
+                            <option value="feedback">Feedback Geral</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="6" 
+                            required 
+                            placeholder="Digite sua mensagem aqui..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <label>
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <span>Concordo com a política de privacidade *</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <span class="material-icons">send</span>
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </article>
+
+            <aside class="contact-info">
+                <h3>Informações Adicionais</h3>
+                
+                <div class="info-section">
+                    <h4>📧 Email</h4>
+                    <p>Entre em contato conosco via formulário acima. Responderemos assim que possível.</p>
+                </div>
+
+                <div class="info-section">
+                    <h4>🎓 Instituição</h4>
+                    <p>
+                        <strong>Universidade de Passo Fundo (UPF)</strong><br>
+                        Instituto de Tecnologia (ITEC)<br>
+                        Disciplina: Desenvolvimento para Web
+                    </p>
+                </div>
+
+                <div class="info-section">
+                    <h4>❓ Perguntas Frequentes</h4>
+                    <ul>
+                        <li>Como criar uma senha forte?</li>
+                        <li>Qual é a diferença entre HTTP e HTTPS?</li>
+                        <li>O que é autenticação de dois fatores?</li>
+                        <li>Como proteger meu computador?</li>
+                    </ul>
+                    <p class="tip">Verifique as na aba "Como se defender?"</p>
+                </div>
+
+                <div class="info-section highlight-box">
+                    <h4>⚠️ Emergência de Segurança?</h4>
+                    <p>
+                        Se você sofreu um ataque ou suspeita de fraude, entre em contato imediatamente 
+                        com as autoridades competentes. Não aguarde!
+                    </p>
+                </div>
+            </aside>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../pages/sobre.html" class="btn btn-secondary">← Sobre</a>
+            <a href="../index.html" class="btn btn-primary">Ir para Home</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Códigos Maliciosos - Web Lab. UPF - Ciências da Computação (ITEC)</p>
+            <p>Desenvolvido pelos alunos de WebLab - Prof. Pablo Leon Rodrigues</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

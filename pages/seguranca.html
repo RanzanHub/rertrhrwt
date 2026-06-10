@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Gerador de Senhas</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../content1.html">Códigos Maliciosos</a></li>
+                <li><a href="content2.html">Como se defender?</a></li>
+                <li><a href="seguranca.html" class="active">Gerador de Senhas</a></li>
+                <li><a href="../pages/verificacao.html">Identificador de Vírus</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="controls">
+                <button id="aumentar-fonte" class="control-btn" title="Aumentar tamanho da fonte">
+                    <span class="material-icons">accessibility</span>
+                </button>
+                <button id="theme-toggle" class="control-btn" title="Alternar tema">
+                    <span class="material-icons">light_mode</span>
+                </button>
+                <button id="diminuir-fonte" class="control-btn" title="Diminuir fonte">
+                    <span class="material-icons">text_decrease</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-header">
+            <h2>Gerador de Senhas Seguras</h2>
+            <p class="subtitle">Clique no botão para gerar uma senha forte</p>
+        </section>
+
+        <article class="content">
+            <section class="content-section">
+                <h3>Gere sua Senha Segura</h3>
+                <p>Use a ferramenta abaixo para gerar senhas fortes e seguras para suas contas.</p>
+
+                <button id="gerar-senha" class="btn btn-primary btn-large">
+                    Gerar Senha
+                </button>
+
+                <h4>Senha Gerada:</h4>
+                <p id="senha">Nenhuma senha gerada.</p>
+            
+                <div class="info-box">
+                    <strong>💡 Dica:</strong> Uma senha forte deve conter letras maiúsculas, minúsculas, números e caracteres especiais. Use senhas diferentes para cada conta e armazene-as em um local seguro.
+                </div>
+            </section>
+        </article>
+    
+        <div class="navigation-buttons">
+            <a href="../pages/content2.html" class="btn btn-secondary">← Como se defender?</a>
+            <a href="../pages/verificacao.html" class="btn btn-primary">Identificador de Vírus →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Gerador de Senhas Seguras - Web Lab. UPF - Ciências da Computação (ITEC)</p>
+            <p>Desenvolvido pelos alunos de WebLab - Prof. Pablo Leon Rodrigues</p>
+        </div>
+    </footer>
+
+    <script src="../js/seguranca.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        document
+            .getElementById("gerar-senha")
+            .addEventListener("click", gerarSenha);
+    </script>
+
+</body>
+</html>
